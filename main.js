@@ -45,8 +45,48 @@ function renderizarProdutos() {
     produtos.forEach(p => {
         const li = document.createElement('li');
         li.textContent = `(${p.id}) ${p.nome} - R$ ${p.preco}`;
+        //hugo
+        let aumentar = document.createElement("button");
+        aumentar.innerText = "+ preço";
+        aumentar.addEventListener("click", () => aumentarPreco(p.id));
+
+        let diminuir = document.createElement("button");
+        diminuir.innerText = "- preço";
+        diminuir.addEventListener("click", () => diminuirPreco(p.id));
+
+        let remover = document.createElement("button");
+        remover.innerText = "remover";
+        remover.addEventListener("click", () => removerProduto(p.id));
+
+        li.appendChild(aumentar);
+        li.appendChild(remover);
+        li.appendChild(diminuir);
         lista.appendChild(li);
     });
+}
+
+function aumentarPreco(id) {
+    let produto = produtos.filter(p => p.id === id);
+
+    produto[0].preco = Number(produto[0].preco) + 1;
+    renderizarProdutos();
+}
+
+function diminuirPreco(id) {
+    let produto = produtos.filter(p => p.id === id);
+    
+    if(produto[0].preco >= 1) {
+        produto[0].preco = Number(produto[0].preco) - 1;
+    } else if(produto[0].preco < 1 && produto[0].preco > 0) {
+        produto[0].preco = 0;
+    }
+
+    renderizarProdutos();
+}
+
+function removerProduto(id) {
+    produtos = produtos.filter(p => p.id !== id);
+    renderizarProdutos();
 }
 
 document.getElementById('formPessoa').addEventListener('submit', function (e) {
