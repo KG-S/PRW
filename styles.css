@@ -1,0 +1,102 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #222426;
+    color: #000000;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    color: #A7F205;
+    margin-bottom: 30px;
+}
+
+/* Seções */
+section {
+    background-color: #84BF04;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #5B7329;
+}
+
+/* Formulários */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 10px;
+    flex: 1;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #f9fafb;
+}
+
+button {
+    padding: 10px 16px;
+    background-color: #5B7329;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #415517;
+}
+
+/* Listas */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    background-color: #f9fafb;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #e5e7eb;
+}
+
+li button {
+    margin-left: 8px;
+    background-color: #10b981;
+}
+
+li button:nth-child(2) {
+    background-color: #ef4444;
+}
+
+li button:nth-child(3) {
+    background-color: #f59e0b;
+}
+
+li button:hover {
+    opacity: 0.9;
+}
