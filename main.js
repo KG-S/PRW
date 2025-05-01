@@ -29,7 +29,7 @@ function adicionarProduto(nome, preco) {
   const novoProduto = {
     id: gerarId(produtos),
     nome,
-    preco: parseFloat(preco).toFixed(2)
+    preco: parseFloat(preco)
   }
   produtos.push(novoProduto)
 
@@ -48,7 +48,7 @@ function renderizarPessoas() {
         let novoProduto = document.createElement('p')
 
         const produto = produtos.find(produto => produto.id === id)
-        novoProduto.innerHTML = `${produto.id} ${produto.nome} ${produto.preco}`
+        novoProduto.innerHTML = `${produto.nome} R$${produto.preco}`
         li.appendChild(novoProduto)
       })
       .join(', ')
