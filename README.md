@@ -20,7 +20,7 @@
 git clone https://github.com/seu-usuario/loja-khe.git
 ```
 
-##👨‍💻 Tecnologias Utilizadas
+##  👨‍💻 Tecnologias Utilizadas
 
 -  HTML5;
 -  CSS3;
