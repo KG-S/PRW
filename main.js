@@ -218,13 +218,14 @@ document
 
 // Dados iniciais
 produtos = [
-  { id: 1, nome: 'Camiseta', preco: 29.9 },
-  { id: 2, nome: 'Boné', preco: 19.9 }
+  { id: 1, nome: 'Camiseta', preco: 29.5 },
+  { id: 2, nome: 'Boné', preco: 19.5 },
+  { id: 3, nome: 'Meia', preco: 5 }
 ]
 
 pessoas = [
-  { id: 1, nome: 'Ana', produtos: [2, 1], total: produtos[0].preco },
-  { id: 2, nome: 'Carlos', produtos: [1], total: produtos[1].preco }
+  { id: 1, nome: 'Ana', produtos: [2, 1, 3], total: produtos[0].preco },
+  { id: 2, nome: 'Carlos', produtos: [1, 2], total: produtos[1].preco }
 ]
 
 renderizarPessoas()
