@@ -1,28 +1,38 @@
-/* Reset básico */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+:root {
+    --cor-fundo-body: #1C260E;
+    --cor-texto-principal: #000000;
+    --cor-titulo: #758C1F;
+    --cor-secao: #435915;
+    --cor-botao: #892C9E;
+    --cor-botao-hover: #B607DE;
+    --cor-lista: #758C1F;
+  }
+  
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #222426;
-    color: #000000;
+    background-color: var(--cor-fundo-body);
+    color:  var(--cor-texto-principal);
     padding: 20px;
     line-height: 1.6;
 }
 
-/* Título principal */
+
 h1 {
     text-align: center;
-    color: #A7F205;
+    color: var(--cor-titulo);
     margin-bottom: 30px;
 }
 
-/* Seções */
 section {
-    background-color: #84BF04;
+    background-color: var(--cor-secao);
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
@@ -31,10 +41,10 @@ section {
 
 h2 {
     margin-bottom: 15px;
-    color: #5B7329;
+    color: var(--cor-titulo);
 }
 
-/* Formulários */
+
 form {
     display: flex;
     flex-wrap: wrap;
@@ -52,9 +62,20 @@ input[type="number"] {
     background-color: #f9fafb;
 }
 
+select {
+    padding: 10px;
+    flex: 1;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #f9fafb;
+    color: #000;
+}
+
 button {
     padding: 10px 16px;
-    background-color: #5B7329;
+    background-color: var(--cor-botao);
+    font-weight: 600;
     color: white;
     border: none;
     border-radius: 6px;
@@ -63,17 +84,19 @@ button {
 }
 
 button:hover {
-    background-color: #415517;
+    background-color: var(--cor-botao-hover);
 }
 
-/* Listas */
+
 ul {
     list-style: none;
     padding-left: 0;
 }
 
 li {
-    background-color: #f9fafb;
+    background-color: var(--cor-lista);
+    font-weight: 600;
+    color:  #ffffff;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 6px;
@@ -81,7 +104,6 @@ li {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid #e5e7eb;
 }
 
 li button {
@@ -99,4 +121,14 @@ li button:nth-child(3) {
 
 li button:hover {
     opacity: 0.9;
+}
+
+footer {
+    background-color: var(--cor-secao);
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 10px;
+    border-radius: 10px;
+    margin-top: 30px;
+    font-size: 0.95rem;
 }
