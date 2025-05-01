@@ -106,6 +106,7 @@ function aumentarPreco(id) {
 
   produto[0].preco = Number(produto[0].preco) + 1
   renderizarProdutos()
+  renderizarPessoas()
 }
 
 function diminuirPreco(id) {
@@ -118,6 +119,7 @@ function diminuirPreco(id) {
   }
 
   renderizarProdutos()
+  renderizarPessoas()
 }
 
 function removerPessoa(id) {
