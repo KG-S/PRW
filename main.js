@@ -113,7 +113,7 @@ function diminuirPreco(id) {
   let produto = produtos.filter(p => p.id === id)
 
   if (produto[0].preco >= 1) {
-    produto[0].preco = Number(produto[0].preco) - 1
+    produto[0].preco = Number((produto[0].preco - 1).toFixed(2))
   } else if (produto[0].preco < 1 && produto[0].preco > 0) {
     produto[0].preco = 0
   }
